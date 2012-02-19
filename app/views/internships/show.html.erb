@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @internship.title %>
+</p>
+
+<p>
+  <b>Sector:</b>
+  <%= @internship.sector %>
+</p>
+
+<p>
+  <b>Languages:</b>
+  <%= @internship.languages %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @internship.length %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @internship.location %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @internship.job_type %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @internship.hours %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @internship.salary %>
+</p>
+
+<p>
+  <b>Company description:</b>
+  <%= @internship.company_description %>
+</p>
+
+<p>
+  <b>Internship:</b>
+  <%= @internship.internship %>
+</p>
+
+
+<%= link_to 'Edit', edit_internship_path(@internship) %> |
+<%= link_to 'Back', internships_path %>

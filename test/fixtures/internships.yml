@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  sector: MyString
+  languages: MyString
+  length: MyString
+  location: MyString
+  type: 
+  hours: MyString
+  salary: MyString
+  company_description: MyString
+  internship: MyString
+
+two:
+  title: MyString
+  sector: MyString
+  languages: MyString
+  length: MyString
+  location: MyString
+  type: 
+  hours: MyString
+  salary: MyString
+  company_description: MyString
+  internship: MyString

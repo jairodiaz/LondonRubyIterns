@@ -1,0 +1,31 @@
+= simple_form_for(@internship, :html => { :class => 'form-horizontal' } ) do |f|
+  - if @internship.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@internship.errors.count, "error")
+      prohibited this internship from being saved:
+    %ul
+      - @internship.errors.full_messages.each do |msg|
+        %li= msg 
+  .field
+    = f.input :title
+  .field
+    = f.input :sector
+  .field
+    = f.input :languages
+  .field
+    = f.input :length
+  .field
+    = f.input :location
+  .field
+    = f.input :job_type
+  .field
+    = f.input :hours
+  .field
+    = f.input :salary
+  .field
+    = f.input :company_description
+  .field
+    = f.input :internship
+  .actions
+    = f.submit

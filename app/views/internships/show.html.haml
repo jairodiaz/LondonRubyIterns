@@ -1,0 +1,34 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @internship.title
+%p
+  %b Sector:
+  = @internship.sector
+%p
+  %b Languages:
+  = @internship.languages
+%p
+  %b Length:
+  = @internship.length
+%p
+  %b Location:
+  = @internship.location
+%p
+  %b Type:
+  = @internship.job_type
+%p
+  %b Hours:
+  = @internship.hours
+%p
+  %b Salary:
+  = @internship.salary
+%p
+  %b Company description:
+  = @internship.company_description
+%p
+  %b Internship:
+  = @internship.internship
+= link_to 'Edit', edit_internship_path(@internship)
+|
+\#{link_to 'Back', internships_path}

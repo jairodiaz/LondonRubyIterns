@@ -1,0 +1,43 @@
+.row.new-internship
+  %p.new-link
+    = link_to new_internship_path, class: 'btn btn-success', title: t(:new) do
+      %i.icon-plus-sign.icon-white
+      %span.new-link.link-name= t(:new)
+
+
+%h1.division Latests internship Opportunities 
+
+.row
+  .span12
+    = form_for @search, html: {class: 'form-search'}  do |f| 
+      = f.label :title_contains, t(:search_title)
+      = f.text_field :title_contains, class: '.input-medium search-query'
+      %button{name: "commit", type: "submit", class: "btn btn-primary"}
+        %i.icon-search.icon-white
+        Search
+
+%table.table
+  %tr
+    %th Location
+    %th Title
+    %th Company description
+    %th Actions
+
+  - @internships.each do |internship| 
+    %tr
+      %td
+        = internship.location 
+      %td
+        = internship.title 
+      %td
+        = internship.company_description 
+      %td
+        = link_to internship_path(internship), class: 'btn btn-primary', title: t(:show) do
+          %i.icon-share-alt.icon-white
+          %span.show-link.link-name= t(:show)
+        = link_to edit_internship_path(internship), class: 'btn btn-primary', title: t(:edit) do
+          %i.icon-edit.icon-white
+          %span.edit-link.link-name= t(:edit)
+        = link_to internship, confirm: t(:delete_question), method: :delete, class: 'btn btn-danger', title: t(:delete) do
+          %i.icon-trash.icon-white
+          %span.delete-link.link-name= t(:delete)

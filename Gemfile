@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '~> 3.2.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,7 +8,9 @@ gem 'rails', '3.2.1'
 gem 'sqlite3'
 gem 'pg'
 gem 'meta_search'
-gem 'therubyracer'
+gem "haml-rails", ">= 0.3.4"
+gem "simple_form",   '~> 2.0.2'
+gem "therubyracer", :group => :assets, :platform => :ruby
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,7 +20,6 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
